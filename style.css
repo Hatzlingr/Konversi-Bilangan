@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h2,h1 {
+    margin-bottom: 16px;
+}
+.container {
+    gap: 16px;
+    background-color: #27445D;
+
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+
+
+}
+
+.converter-menu, .arithmetic-menu {
+    background-color:#f0f0f0;
+    padding: 15px;
+    display: flex;
+    width: 350px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 26px 10px #497D74;
+}
+
+.converter-menu h1, .arithmetic-menu h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.converter {
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#inputType, input, #operator {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #71BBB2;
+    
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#inputType:hover, input:hover, #operator:hover {
+    border-color: #497D74;
+}
+
+#inputType:focus, input:focus, #operator:focus {
+    border-color: #497D74;
+}
+
+#inputType option, #operator option {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    color: #fff;
+    border: none;
+    background-color: #497D74;
+    padding: 12px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+    color: #497D74;
+    box-shadow: 0 0 30px rgba(73, 125, 116, 1);
+}
+
+
+.arithmetic {
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.arithmetic-result, .result {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #71BBB2;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#reset-arithmetic, #reset-converter {
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .converter-menu, .arithmetic-menu {
+        width: 90%;
+    }
+    .converter-menu, .arithmetic-menu {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+    }
+}

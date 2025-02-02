@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Diskrit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="converter-menu">
+        <h1>Konversi Bilangan</h1>
+        <div class="converter">
+          <label for="inputType">Pilih jenis input</label>
+          <select id="inputType">
+            <option value="decimal">Decimal</option>
+            <option value="binary">Biner</option>
+            <option value="octal">Octal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+          </select>
+          <input type="text" id="inputNumber" placeholder="Masukkan angka" />
+          <button onclick="convert()">Convert</button>
+        </div>
+        <div class="result">
+          <h2>Hasil Konversi</h2>
+          <p>Desimal : <span id="decimal-result">-</span></p>
+          <p>Biner : <span id="binary-result">-</span></p>
+          <p>Octal : <span id="octal-result">-</span></p>
+          <p>Hexadecimal : <span id="hexadecimal-result">-</span></p>
+          <button id="reset-converter" onclick="reset('converter')">
+            Reset
+          </button>
+        </div>
+      </div>
+      <div class="arithmetic-menu">
+        <h1>Operasi Aritmatika</h1>
+        <div class="arithmetic">
+          <input
+            type="text"
+            id="firstNumber"
+            placeholder="Masukkan angka pertama"
+          />
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+          </select>
+          <input
+            type="text"
+            id="secondNumber"
+            placeholder="Masukkan angka kedua"
+          />
+          <button onclick="calculate()">Calculate</button>
+        </div>
+        <div class="arithmetic-result">
+          <h2>Hasil Operasi Aritmatika</h2>
+          <p>Desimal : <span id="arithmetic-decimal-result">-</span></p>
+          <p>Biner : <span id="arithmetic-binary-result">-</span></p>
+          <p>Octal : <span id="arithmetic-octal-result">-</span></p>
+          <p>Hexadecimal : <span id="arithmetic-hexadecimal-result">-</span></p>
+          <button id="reset-arithmetic" onclick="reset('arithmetic')">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
