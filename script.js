@@ -20,7 +20,7 @@ function convert() {
             break;
     }
     if (isNaN(decimalValue)) {
-        alert('Invalid number');
+        alert('Angka tidak valid');
     } else {
         document.getElementById('decimal-result').textContent = decimalValue.toString(10);
         document.getElementById('binary-result').textContent = decimalValue.toString(2);
@@ -117,7 +117,7 @@ function calculate() {
     secondNumber = parseInt(secondNumber, base2);
 
     if (isNaN(firstNumber) || isNaN(secondNumber)) {
-        alert('Invalid number');
+        alert('Angka tidak valid');
         return;
     }
 
@@ -133,7 +133,7 @@ function calculate() {
             break;
         case '/':
             if (secondNumber === 0) {
-                alert('Division by zero is not allowed');
+                alert('Pembagian dengan angka 0 tidak diizinkan');
                 return;
             }
             result = firstNumber / secondNumber;
